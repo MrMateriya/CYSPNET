@@ -15,8 +15,6 @@ body {
     font-family: "Raleway", sans-serif;
     background-color: #272937;
     min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
     background-image: url("/images/BackgroundSite.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -26,6 +24,11 @@ body {
     width: 1345px;
     margin: 0 auto;
 }
+.pages-wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
 #app {
     min-height: 100vh;
     display: grid;
@@ -33,4 +36,23 @@ body {
 }
 html {
     height: 100%;
+}
+
+@media (max-width: 1630px) {
+    .container {
+        width: 100%;
+        padding: 0 120px;
+    }
+}
+@media (max-width: 960px) {
+    .container {
+        width: 880px;
+        padding: 0;
+    }
+}
+@media (max-width: 900px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
 }

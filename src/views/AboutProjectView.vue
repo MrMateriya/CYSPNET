@@ -9,24 +9,29 @@
         команды и клубы, арены и организаторы — здесь каждый может раскрыть свой потенциал,
         зарабатывать в любимой игре и просто весело проводить время с друзьями.
       </p>
-      <Button class="about-project__button">
+      <MyButton v-if="!user" @click="$emit('openSignInModel')" class="about-project__button">
         Вступить
-      </Button>
+      </MyButton>
     </div>
     <img class="about-project__background" src="/images/Enigma.png" alt="Enigma.png">
   </main>
 </template>
 
 <script>
-import Button from "@/components/Button.vue";
+import MyButton from "@/components/MyButton.vue";
 
 export default {
-  components: {Button}
-
+  components: {MyButton},
+  inject: ['user'],
 }
 </script>
 
 <style scoped>
+.about-project {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 .about-project__description {
   width: 425px;
 }
@@ -50,10 +55,11 @@ export default {
 }
 .about-project__background {
   position: absolute;
-  top: 108px;
-  right: 0;
+  top: 163px;
+  right: 580px;
   user-select: none;
   pointer-events: none;
   z-index: -1;
+  width: 1299px;
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
-  <button :class="[typeButton === 'transparent' ? 'button_transparent' : '', typeButton === 'white' ? 'button_white' : '', 'button']">
+  <button :type="type" :class="[typeButton === 'transparent' ? 'button_transparent' : '', typeButton === 'white' ? 'button_white' : '', 'button']">
     <slot></slot>
   </button>
 </template>
 
 <script>
 export default {
-  props: ['typeButton'],
+  props: ['typeButton', 'type'],
 }
 </script>
 
@@ -26,6 +26,7 @@ export default {
   border: 1px solid var(--red);
   color: var(--white);
   transition: all 0.5s ease;
+  white-space: nowrap;
 }
 .button_white {
   color: var(--white);

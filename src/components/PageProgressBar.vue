@@ -7,19 +7,10 @@
       <div :class="['progress-bar__item-circle', path === '/about-project' ? 'progress-bar__item-circle_current' : '']"></div>
     </li>
     <li class="progress-bar__item">
-      <div class="progress-bar__item-circle"></div>
+      <div :class="['progress-bar__item-circle', path === '/advantages' ? 'progress-bar__item-circle_current' : '']"></div>
     </li>
     <li class="progress-bar__item">
-      <div class="progress-bar__item-circle"></div>
-    </li>
-    <li class="progress-bar__item">
-      <div class="progress-bar__item-circle"></div>
-    </li>
-    <li class="progress-bar__item">
-      <div class="progress-bar__item-circle"></div>
-    </li>
-    <li class="progress-bar__item">
-      <div class="progress-bar__item-circle"></div>
+      <div :class="['progress-bar__item-circle', path === '/footer-site' ? 'progress-bar__item-circle_current' : '']"></div>
     </li>
   </ul>
 </template>
@@ -46,7 +37,7 @@ export default {
   list-style: none;
   margin-top: auto;
   margin-bottom: auto;
-  top: calc(50% - 147px);
+  top: calc(50% - 67px);
   left: 50px;
 }
 .progress-bar__item {
@@ -61,5 +52,11 @@ export default {
 }
 .progress-bar__item-circle_current {
   opacity: 1;
+}
+
+@media (max-width: 960px) {
+  .progress-bar {
+    display: none;
+  }
 }
 </style>

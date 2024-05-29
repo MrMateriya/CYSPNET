@@ -16,31 +16,44 @@
         </ul>
       </div>
       <div class="buttons">
-        <Button class="buttons__join-button">Присоединиться</Button>
-        <Button class="buttons__about-project" type-button="white">О проекте</Button>
+        <MyButton v-if="!user" class="buttons__join-button" @click="$emit('openSignInModel')">Присоединиться</MyButton>
+        <MyButton @click="this.$router.push('/about-project')" class="buttons__about-project" type-button="white">О проекте</MyButton>
       </div>
     </div>
-    <img class="home-view__background" src="/images/BackGroundHome.png" alt="BackGroundHome.png">
+    <div class="home-view__background-wrapper">
+      <img class="home-view__background" src="/images/BackGroundHome.png" alt="BackGroundHome.png">
+    </div>
+
   </main>
 </template>
 
 <script>
-import Button from "@/components/Button.vue";
+import MyButton from "@/components/MyButton.vue";
 
 export default {
-  components: {Button}
-
+  components: {MyButton},
+  inject: ['user'],
 }
 </script>
 
 <style scoped>
-.home-view__background {
+.home-view {
+
+}
+.home-view__menu {
+
+}
+.home-view__background-wrapper {
+  overflow: hidden;
   position: absolute;
   top: 108px;
   right: 0;
   user-select: none;
   pointer-events: none;
   z-index: -1;
+}
+.home-view__background {
+
 }
 .home-view__description-wrapper {
   width: 722px;
@@ -117,5 +130,37 @@ export default {
 }
 .buttons__join-button {
   margin-right: 15px;
+}
+
+@media (max-width: 960px) {
+  .home-view {
+    display: flex;
+    align-items: center;
+  }
+  .home-view__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .home-view__features-wrapper {
+    grid-template-columns: 1fr;
+    margin-bottom: 45px;
+
+  }
+  .features-list {
+    margin-bottom: 10px;
+  }
+  .features-list:last-child {
+    margin: 0;
+  }
+  .home-view__background {
+    width: 631px;
+    top: 139px;
+    right: -72px;
+
+  }
+  .home-view__description-wrapper {
+    width: 390px;
+    margin-top: 0;
+  }
 }
 </style>
