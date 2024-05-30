@@ -72,6 +72,7 @@ export default {
   background-color: #000000BF;
 }
 .tooltip {
-
+  padding: 20px 35px;
+  margin-right: auto;
 }
 </style>

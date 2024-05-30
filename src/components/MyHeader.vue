@@ -114,4 +114,9 @@ export default {
 @media (max-width: 960px) {
   
 }
+@media (max-width: 650px) {
+  .header__buttons {
+    display: none;
+  }
+}
 </style>

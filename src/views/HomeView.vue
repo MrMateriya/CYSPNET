@@ -144,7 +144,6 @@ export default {
   .home-view__features-wrapper {
     grid-template-columns: 1fr;
     margin-bottom: 45px;
-
   }
   .features-list {
     margin-bottom: 10px;
@@ -161,6 +160,37 @@ export default {
   .home-view__description-wrapper {
     width: 390px;
     margin-top: 0;
+  }
+}
+@media (max-width: 640px) {
+  .home-view__background-wrapper {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  .home-view__sub-title {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .home-view__title {
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+  .features-list__item {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .home-view__features-wrapper {
+    margin-bottom: 25px;
+  }
+  .buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .home-view__description-wrapper {
+    width: 100%;
   }
 }
 </style>

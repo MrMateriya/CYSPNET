@@ -28,4 +28,9 @@ export default {
   align-items: center;
   position: relative;
 }
+@media (max-width: 390px) {
+  .footer {
+    padding: 0;
+  }
+}
 </style>

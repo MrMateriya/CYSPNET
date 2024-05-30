@@ -62,4 +62,51 @@ export default {
   z-index: -1;
   width: 1299px;
 }
+@media (max-width: 1805px) {
+  .about-project__background {
+    top: unset;
+    right: 20%;
+  }
+}
+@media (max-width: 1525px) {
+  .about-project__background {
+    top: unset;
+    right: 10%;
+  }
+}
+@media (max-width: 1360px) {
+  .about-project__background {
+    top: unset;
+    right: -10%;
+  }
+}
+@media (max-width: 1110px) {
+  .about-project__background {
+    top: unset;
+    right: -15%;
+  }
+}
+@media (max-width: 960px) {
+  .about-project__background {
+    width: 587px;
+    top: unset;
+    right: unset;
+    bottom: 20px;
+  }
+  .about-project {
+    justify-content: center;
+  }
+  .about-project__description-title {
+    font-size: 36px;
+    line-height: 54px;
+  }
+}
+@media (max-width: 540px) {
+  .about-project__description {
+    width: 100%;
+  }
+  .about-project__background {
+    display: none;
+  }
+}
 </style>

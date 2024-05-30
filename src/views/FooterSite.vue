@@ -140,4 +140,21 @@ export default {
   opacity: 0.5;
   color: var(--white);
 }
+@media (max-width: 650px) {
+  .navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media (max-width: 360px) {
+  .navigation {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .navigation__social-media {
+    margin-bottom: 20px;
+  }
+}
 </style>

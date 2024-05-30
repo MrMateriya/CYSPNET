@@ -96,4 +96,13 @@ export default {
   padding: 50px 0;
   border: 1px solid #FFFFFF80;
 }
+@media (max-width: 1000px) {
+  .modal {
+    width: 90%;
+  }
+  .modal__button-cross {
+    top: 30px;
+    right: 30px;
+  }
+}
 </style>

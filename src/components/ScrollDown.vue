@@ -55,4 +55,9 @@ export default {
   width: 24px;
   height: 24px;
 }
+@media (max-width: 340px) {
+  .scroll-down__text {
+    font-size: 14px;
+  }
+}
 </style>
